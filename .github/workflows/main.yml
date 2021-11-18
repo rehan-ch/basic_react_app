@@ -18,17 +18,9 @@ jobs:
           cmd: install # will run `yarn install` command
       - name: Build React APP
         run: sudo yarn build
-      # - name: Install dependencies
-      #   run: npm install
-
-      # - name: Run the tests
-      #   run: npm test
-
-      # - name: Build
-      #   run: npm run build
-      # - name: Install Surge
-      #   run: npm install -g surge
-      # - name: Run surge
-      #   run: surge ./ basic-react-app-test.surge.sh --token ${{ secrets.SURGETOKEN }}
+      - name: Install Surge
+        run: yarn install -g surge
+      - name: Run surge
+        run: surge ./ basic-react-app-test.surge.sh --token ${{ secrets.SURGETOKEN }}
 
           
