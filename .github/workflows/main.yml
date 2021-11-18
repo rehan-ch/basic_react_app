@@ -19,7 +19,7 @@ jobs:
       - name: Build React APP
         run: sudo yarn build
       - name: Install Surge
-        run: yarn install -g surge
+        run: npm install -g surge
       - name: Run surge
         run: surge ./ basic-react-app-test.surge.sh --token ${{ secrets.SURGETOKEN }}
 
